@@ -6,64 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        /* *{
             margin: 0;
             padding: 0;
 
-        }
+        } */
         div{
-            width: 25%;
+            width: 370px;
             margin: auto;
-            margin-top: 5%;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            /* border-radius: 15px; */
             background-color:rgb(31, 206, 168) ;
             text-align: center;
             color: white;
-        }
-        div>h2{
-            margin-top: 5%;
+            padding: 20px;
         }
         #signup{
-            width: 90%;
-            margin: auto;
-            margin-top: 5%;
-            /* border-radius: 5px; */
-            flex-direction: column;
-
+            width: 350px;
+            margin-top: 5px;
         }
-        #signup>input{
-            width: 90%;
+        input{
+            width: 250px;
             border: none;
-            /* border-radius: 5px; */
-            margin-top: 3%;
-            font-size: 18px;
-            height: 40px;
-            /* padding: 2%; */
+            color: grey;
+            padding: 20px;
+            margin-top: 15px
         }
 
         #signupbtn,#returnbtn{
             background-color: rgb(2, 180, 142);
-            color: white;
-            padding: 2% 0% 2% 0%;
             font-weight: 400;
-            height: 30px;
-        }
-        #returnbtn{
-            margin-bottom: 2%;
-        }
+            text-align: center;
+            color: white;
+       
     </style>
 </head>
 <body>
     <div>
-        <h2> --Visitor--</h2>
-        <form id="signup">
-            <input type="text" placeholder="Full Name" id="userName">
-            <input type="email" placeholder="Email" id="userId">
-            <input type="text" placeholder="Organization" id="userOrg">
-            <input type="submit" value="SIGN UP" id="signupbtn">
-            <input type="button" value="RETURN" id="returnbtn">
+        <h2>-  Visitor  -</h2>
+        <form>
+            <div id="signup">
+                <input type="text" placeholder="Full Name" id="userName">
+                <input type="email" placeholder="Email" id="userId">
+                <input type="text" placeholder="Organization" id="userOrg">
+                <input type="text" value="SIGN UP" id="signupbtn">
+                <input type="text" value="RETURN" id="returnbtn">
+            </div>
         </form>
     </div>
  
