@@ -10,21 +10,40 @@
 
         
         #container{
-          display: grid;
-          grid-template-columns: repeat(2,1fr);
-          gap: 20px;
-          
-           
+         display: flex;
+         justify-content: space-around;
 
         }
         #container>div{
-            padding: 400px;
-            height: 500px;
-            width: 400px;
+            
+            height:auto ;
+            width: 500px;
+           
         }
         img{
             height: 500px;
-            width: 5gi00px;
+            width: 500px;
+        }
+        #container>div>div{
+         
+          display: flex
+          ;
+          justify-content: space-around;
+          margin-left: -50px;
+
+        }
+        #container>div{
+          font-size: 30px;
+          font-weight: lighter;
+         
+        }
+        #container>div>div>h2{
+          font-size: 40px;
+         
+        }
+        #container>div>div>h2:nth-child(2){
+          text-decoration: line-through;
+
         }
     </style>
 </head>
@@ -39,17 +58,24 @@
     var mensData = [
     {
       image_url:
-        "https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp",
-      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
-      price: "1170",
-      strikedoffprice: "$2599",
+        "https://content.shop4reebok.com/static/Product-GP7180/reebok_GP7180_1.jpg.plp",
+      name: "MEN'S REEBOK TRAINING WORKOUT  TEE  ",
+      head:"pause",
+      des:"mens cotton long sleve shrung",
+      price: "$1299",
+      strikedoffprice: "$1440",
+      off:"-76%"
     },
+   
     {
       image_url:
         "https://content.shop4reebok.com/static/Product-EX3921/reebok_EX3921_1.jpg.plp",
       name: "MEN'S REEBOK SWIM ARUBA FLIP SLIPPERS ",
-      price: 699,
-      strikedoffprice: 999,
+      head:"JUBINATION",
+      des:"men slvess pack of 1",
+      price: "$699",
+      strikedoffprice: "$999",
+      off:"-47%"
     }];
 
 
@@ -60,20 +86,26 @@ mensData.forEach(function(elem ) {
    var image =document.createElement("img")
    image.setAttribute("src",elem.image_url)
 
-   var name = document.createElement("p")
-   name.innerText=elem.name
+
+   var name = document.createElement("h2")
+   name.innerText=elem.head
+   var des =document.createElement("h2")
+   des.innerText=elem.des
+
+   const sb = document.createElement('div');
+
 
    var price = document.createElement("h2")
    price.innerText=elem.price
    
-   var strike = document.createElement("h4")
+   var strike = document.createElement("h2")
    strike.innerText=elem.strikedoffprice
 
-   var cart = document.createElement("button")
-   cart.textContent="Add to cart"
+    const off = document.createElement('h2');
+    off.textContent=elem.off
+    sb.append(price,strike,off)
 
-
-   card.append(image,name,price,strike,cart)
+   card.append(image,name,des,sb)
 
    document.querySelector("#container").append(card)
 
