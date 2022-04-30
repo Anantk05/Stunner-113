@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menspsge</title>
+    <style>
+        
+
+        
+        #container{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          gap: 20px;
+          
+           
+
+        }
+        #container>div{
+            padding: 400px;
+            height: 500px;
+            width: 400px;
+        }
+        img{
+            height: 500px;
+            width: 5gi00px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    
+</body>
+</html>
+<script>
+    var mensData = [
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp",
+      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "$2599",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3921/reebok_EX3921_1.jpg.plp",
+      name: "MEN'S REEBOK SWIM ARUBA FLIP SLIPPERS ",
+      price: 699,
+      strikedoffprice: 999,
+    }];
+
+
+    
+mensData.forEach(function(elem ) {
+   var card =document.createElement("div")
+
+   var image =document.createElement("img")
+   image.setAttribute("src",elem.image_url)
+
+   var name = document.createElement("p")
+   name.innerText=elem.name
+
+   var price = document.createElement("h2")
+   price.innerText=elem.price
+   
+   var strike = document.createElement("h4")
+   strike.innerText=elem.strikedoffprice
+
+   var cart = document.createElement("button")
+   cart.textContent="Add to cart"
+
+
+   card.append(image,name,price,strike,cart)
+
+   document.querySelector("#container").append(card)
+
+
+
+
+
+});
+
+
+</script>
